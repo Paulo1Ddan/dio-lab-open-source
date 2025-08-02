@@ -15,3 +15,20 @@ searchButton.addEventListener('click', (e) => {
   }
   window.open(url, '_blank');
 })
+
+/* Adicionando o script do menu responsivo */
+const toggleButton = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".menu");
+const icon = toggleButton.querySelector("i");
+
+toggleButton.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+
+  if (navLinks.classList.contains("show")) {
+    icon.classList.remove("bi-list");
+    icon.classList.add("bi-x-lg");
+  } else {
+    icon.classList.remove("bi-x-lg");
+    icon.classList.add("bi-list");
+  }
+});
